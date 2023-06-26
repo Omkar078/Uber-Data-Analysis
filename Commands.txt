@@ -1,0 +1,23 @@
+# Commands to setup python  environment:
+
+sudo apt-get update -y
+
+sudo apt-get install python3-distutils
+
+sudo apt-get install python3-apt
+
+sudo apt-get install wget
+wget https://bootstrap.pypa.io/get-pip.py
+
+sudo python3 get-pip.py
+
+# Command to install pandas:
+
+sudo pip3 install pandas
+
+# Commands to Install and inititate Mage AI
+
+sudo pip3 install mage-ai
+
+mage start [project-name]
+
