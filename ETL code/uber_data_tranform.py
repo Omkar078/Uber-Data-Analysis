@@ -109,8 +109,14 @@ def transform(df, *args, **kwargs):
                'payment_type_id', 'fare_amount', 'extra', 'mta_tax', 'tip_amount', 'tolls_amount',
                'improvement_surcharge', 'total_amount']]
 
-    print(fact_table)
-    return 'success'
+    return {"Datetime_dim":Datetime_dim.to_dict(orient="dict"),
+    "passcount_dim":passcount_dim.to_dict(orient="dict"),
+    "tripdist_dim":tripdist_dim.to_dict(orient="dict"),
+    "ratecode_dim":ratecode_dim.to_dict(orient="dict"),
+    "pickloc_dim":pickloc_dim.to_dict(orient="dict"),
+    "droploc_dim":droploc_dim.to_dict(orient="dict"),
+    "paytype_dim":paytype_dim.to_dict(orient="dict"),
+    "fact_table":fact_table.to_dict(orient="dict")}
 
 
 @test
